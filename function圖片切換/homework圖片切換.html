@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #img_box {
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="img_box" src="https://fpscdn.yam.com/world/201904/1b/58/5cc1a7dd41b58.jpg" alt="">
+    <script>
+        var old_img = document.getElementById('img_box');
+        var photo1_img = "https://fpscdn.yam.com/world/201904/1b/58/5cc1a7dd41b58.jpg";
+        var photo2_img = "http://d33hzbufl2gyhz.cloudfront.net/dialogs/25943/demopicture_25943_20160310060856.jpg"
+        var new_img ="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSYLMzRzyfDebwyVKLhOwi9mzl-IIeI5ABl0_3Dsfi3c9Vg9S4l"
+            old_img.onclick = function () {
+                if (old_img.getAttribute('src') === photo1_img) {
+                    old_img.setAttribute('src', photo2_img)
+                }
+                else if(
+                    old_img.getAttribute('src') ===  photo2_img){
+                    old_img.setAttribute('src', new_img)
+                }
+                else{
+                    old_img.setAttribute('src', photo1_img)
+                };             
+                
+            }
+        // console.log(photo1_img.getAttribute('src'))F12檢查用
+    </script>
+
+</body>
+
+</html>
